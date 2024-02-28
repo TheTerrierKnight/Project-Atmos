@@ -2,6 +2,7 @@
 import turtle
 import random
 import time
+import os
 # Start Up CMD Line (DO NOT TOUCH)
 GlobalPath = [36/34/67/44/22/33/44/55] # Does Nothing yet :(
 GlobalPrefix = "AtmosProton.py" # Does nothing yet :(
@@ -49,7 +50,9 @@ while RunCMD == True:
     time.sleep(1)
     print("Wohoo! The Prefix Works!")
    if command == ("Help"):
-    print("version-1,version-2,forward,backward,left,right,color select,exit")
+    print("version-1,version-2,forward,backward,left,right,color select,exit,purge")
+   if command == ("purge"):
+    os.system("cls")
    if command == "version-1":
     print("You are Running AtmosProtonCMD-V1")
    if command == "version-2":
