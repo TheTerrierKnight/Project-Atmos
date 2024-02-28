@@ -1,12 +1,14 @@
-# Start Up CMD Line (DO NOT TOUCH)
-GlobalPath = [36/34/67/44/22/33/44/55] # Does Nothing yet :(
-GlobalPrefix = "AtmosProton.py" # Does nothing yet :(
-AdminPrefix = "!"
-print("Preloading Finished! Setting Up Configs and Starting Atmos-CMD")
 # Inport All needed Stuff
 import turtle
 import random
 import time
+# Start Up CMD Line (DO NOT TOUCH)
+GlobalPath = [36/34/67/44/22/33/44/55] # Does Nothing yet :(
+GlobalPrefix = "AtmosProton.py" # Does nothing yet :(
+AdminPrefix = "!"
+print("Starting Peloading")
+time.sleep(1)
+print("Preloading Finished! Setting Up Configs and Starting Atmos-CMD")
 
 # GLOBAL CONFIGS (Use 0 or 1)
 UseGlobalPrefix = 0
