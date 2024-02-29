@@ -3,16 +3,13 @@ Noted Bugs that may occur:
 PROTON:
 no found bugs...
 
-
 SCOUT:
 -Scout may crash when using decimals in specific commands
 
-SIRUS:
+SIRIUS:
 -setting Simulation Configs to a high level may cause inaccurate data
 
-
-
-XENON:
+QUILL:
 no found bugs...
 
 
