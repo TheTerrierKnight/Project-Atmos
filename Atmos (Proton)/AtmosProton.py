@@ -49,7 +49,7 @@ while RunCMD == True:
     print("Running...")
     time.sleep(1)
     print("Wohoo! The Prefix Works!")
-   if command == ("Help"):
+   if command == ("help"):
     print("version-1,version-2,forward,backward,left,right,color select,exit,purge")
    if command == ("purge"):
     os.system("cls")
