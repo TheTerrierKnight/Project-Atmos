@@ -1,0 +1,22 @@
+Noted Bugs that may occur:
+
+PROTON:
+no found bugs...
+
+
+SCOUT:
+-Scout may crash when using decimals in specific commands
+
+SIRUS:
+-setting Simulation Configs to a high level may cause inaccurate data
+
+
+
+XENON:
+no found bugs...
+
+
+
+
+UNFIXABLE BUGS:
+-entering Letters in int Prompts WILL cause a fail

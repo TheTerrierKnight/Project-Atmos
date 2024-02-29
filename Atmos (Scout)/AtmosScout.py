@@ -47,7 +47,7 @@ while True:
   if command == ("version-1"):
    print("You are Running AtmosScoutCMD-V0.5")
   if command == ("version-2"):
-   print("You are Running Atmos/Scout/V0.5.1")
+   print("You are Running Atmos/Scout/V0.5.3")
   if command == ("purge"):
    os.system("cls")
   if command == ("merge"):

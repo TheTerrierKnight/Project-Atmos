@@ -2,6 +2,7 @@
 import os
 import time
 import random as rand
+CMD = ("Path.Main.SIM/CMD") # DO NOT TOUCH
 
 # GLOBAL CONFIGS/SIMULATION CONFIGS
 
@@ -25,6 +26,16 @@ StructureVerticalHeight = 36 # Height
 WindForceStructure = 23.4 # How much wind is affecting the Structure
 IntegrityLossExponential = 2 # How much is the StructureIntegrity Reduced By
 
+
+# BreakneckV2
+RamSpeed = 2500 # Ram Speed
+RamStorage = 3.4 # Maxium Storage for your RAM
+RwPerMinute = 56 # Read/Write Per Minute
+
+# MaxMinV3
+MaxiumOverflow = 600 # Max
+MinimumOverflow = 300 # Min
+
 # //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -41,20 +52,21 @@ IntegrityLossExponential = 2 # How much is the StructureIntegrity Reduced By
 
 #Notices
 if BetaWarningAacknowledge != 1:
- print("Notice: Sirus is in Beta, Please report issues that ouccur")
- print("Notice: Sirus May Provide Inaccurate Data. Please be careful when using Sirus")
+ print("Notice: Sirius is in Beta, Please report issues that ouccur")
+ print("Notice: Sirius May Provide Inaccurate Data. Please be careful when using Sirus")
 else:
- print("You Have a Hidden Notice")
+ print("You Have 2 Hidden Notices")
 
 
-
-
-
+# This Setting is for Experenced Devs, Please be careful with this.
+PreloadX = 27
+PreloadY = 63
+# Defaults = 27,63
 
 
 #Fire Up The Simulation
 print("Beginning Preloading... This Can Take A Minute")
-time.sleep(rand.randint(27,63))
+time.sleep(rand.randint(PreloadX,PreloadY))
 print("Preload Finished! Loading SimulationManager...")
 time.sleep(rand.randint(3,7))
 print("Loading Finished! Starting Atmos-CMD")
@@ -66,20 +78,30 @@ print("------------------------------------------------------------------")
 time.sleep(1.5)
 print("------------------------------------------------------------------")
 
-while True:
+
+ 
+ 
+# ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+while CMD == ("Path.Main.SIM/CMD"):
   command = input("Atmos-SIM/CMD: ")
   if command == ("help"):
-   print("version-1,verson-2,purge,start-simulaton-type-[SIM-NAME]")
+   print("version-1,verson-2,purge,start-simulation-type-[SIM-NAME]")
   if command == ("version-1"):
-   print("You are Running AtmosSirusCMD-V0.2")
+   print("You are Running AtmosSiriusCMD-V0.2")
   if command == ("version-2"):
-   print("You are Running Atmos/Sirus/V0.2.2")
-  if command == ("start-simulaton-type-HeatIndex"):
+   print("You are Running Atmos/Sirius/V0.2.4")
+  if command == ("start-simulation-type-HeatIndex"):
    print("Starting Simulation. Please wait while we process the data.")
    time.sleep(rand.randint(4,7))
    print("Your Heat Index: ")
    print((HeatVector*HeatTemp)*AirPrefix)
-  if command == ("start-simulaton-type-BottleTemp-V2"):
+  if command == ("start-simulation-type-BottleTemp-V2"):
    print("Starting Simulation. Please wait while we process the data.")
    time.sleep(rand.randint(3,6))
    print("Your Target Temp is off by: ")
@@ -92,8 +114,20 @@ while True:
    print("------------------------------------------------------------------")
    time.sleep(1.5)
    print("------------------------------------------------------------------")
-  if command == ("start-simulaton-type-C-CAD_V1.3"):
+  if command == ("start-simulation-type-C-CAD_V1.3"):
    print("Starting Simulation. Please wait while we process the data.")
    time.sleep(rand.randint(3,6))
-   print("Your Structure will Degrade Around this Pressure Force: ")
+   print("Your Structure will Degrade Around this Pressure Force (PSI): ")
    print((StructureVerticalHeight+WindForceStructure)//IntegrityLossExponential)
+  if command == ("start-simulation-type-BreakneckV2"):
+   print("Starting Simulation. Please wait while we process the data.")
+   time.sleep(rand.randint(3,6))
+   print("Your Ram Has the Following I/O Specs: ")
+   print((RamSpeed-RwPerMinute)*RamStorage)
+  if command == ("start-simulation-type-MaxMinV3"):
+   print("Starting Simulation. Please wait while we process the data.")
+   time.sleep(rand.randint(3,6))
+   print("You Max/Min MoE is: ")
+   print(MaxiumOverflow-MinimumOverflow)
+else:
+ print("Critical Error 500: Engine Crash/Invalid Path")
