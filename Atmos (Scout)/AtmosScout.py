@@ -44,9 +44,9 @@ while True:
   command = input("Atmos-CMD: ")
   if command == ("help"):
    print("merge,purge,verson-1,verson-2,mult,split,math-circle,find-perimeter,calculate-datapoint-RMS,temp-F-C,temp-C-F,money")
-  if command == ("verson-1"):
+  if command == ("version-1"):
    print("You are Running AtmosScoutCMD-V0.5")
-  if command == ("verson-2"):
+  if command == ("version-2"):
    print("You are Running Atmos/Scout/V0.5.1")
   if command == ("purge"):
    os.system("cls")
